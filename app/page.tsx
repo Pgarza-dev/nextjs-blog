@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { simpleBlogCard } from "./lib/interface";
 import { client, urlFor } from "./lib/sanity";
 import Image from "next/image";
@@ -21,10 +21,17 @@ export default async function Home() {
   const data: simpleBlogCard[] = await getData();
   console.log(data);
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 mt-5 gap-5">
     {data.map((post, idx) => (
       <Card key={idx}>
-        <Image src={urlFor(post.titleImage).url()} alt="image" width={500} height={500} />
+        <Image src={urlFor(post.titleImage).url()} alt="image" width={500} height={300} className="rounded-t-lg h-[300px] object-cover" />
+      
+     
+        <CardContent className="pt-5">
+          <h3 className="text-lg line-clamp-2">{post.title}</h3>
+          <p className="line-clamp-3 text-sm pt-2 text-gray-600 dark:text-gray-300">{post.smallDescription}</p>
+        </CardContent>
+
       </Card>))}
 
 
