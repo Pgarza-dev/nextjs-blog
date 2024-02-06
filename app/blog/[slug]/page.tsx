@@ -25,8 +25,8 @@ export default async function BlogArticle({
   return (
     <div className="p-8">
       <h1>
-        <span className="text-base block text-primary text-center font-semibold tracking-wide uppercase">
-          Pablo Garza - Blog
+        <span className="text-base block text-center font-semibold tracking-wide uppercase">
+          Pablo Garza - <span className="text-primary">Blog</span>
         </span>
         <span className="pt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
           {data.title}
@@ -42,7 +42,7 @@ export default async function BlogArticle({
         className="rounded-lg mt-8 border w-full h-96"
       />
 
-      <div className="mt-16 prose prose-blue prose-xl dark:prose-invert">
+      <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary">
         <PortableText value={data.content} />
       </div>
     </div>
