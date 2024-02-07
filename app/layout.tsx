@@ -19,17 +19,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        
-      <Navbar />
-        <main className="max-w-3xl mx-auto p-4">{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
+          <Navbar />
+          <header>
+            <div className="bg-image w-full h-full text-center flex justify-center items-center">
+              {/* <h1 className="text-black italic bg-white bg-opacity-50 w-full p-4 text-sml sm:text-sm md:text-4xl lg:text-8xl">
+                In the Fife of a Fighter
+              </h1> */}
+            </div>
+          </header>
+          <main className="max-w-3xl mx-auto p-4">{children}</main>
         </ThemeProvider>
-        </body>
+      </body>
     </html>
   );
 }
