@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,14 +26,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <Navbar />
-          <header>
-            <div className="bg-image w-full h-full text-center flex justify-center items-center">
-              {/* <h1 className="text-black italic bg-white bg-opacity-50 w-full p-4 text-sml sm:text-sm md:text-4xl lg:text-8xl">
-                In the Fife of a Fighter
-              </h1> */}
-            </div>
-          </header>
+
           <main className="max-w-3xl mx-auto p-4">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
