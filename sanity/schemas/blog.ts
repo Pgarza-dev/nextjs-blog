@@ -34,7 +34,17 @@ export default {
             of: [
                 { type: "block" },
             ],
-        }
+        },
+        {
+            name: "categories",
+            title: "Blog Categories",
+            type: "reference",
+            to: [
+                {
+                    type: "category",
+                },
+            ],
+        },
        
     ]
 }
