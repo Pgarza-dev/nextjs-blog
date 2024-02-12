@@ -15,7 +15,9 @@
     "sanity"
   ],
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@sanity/vision": "^3.27.1",
+    "embla-carousel-react": "^8.0.0-rc22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
