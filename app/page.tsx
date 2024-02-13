@@ -11,6 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import FightPosts from "./components/FightPosts";
 
 export const revalidate = 30; // revalidate at most every 30 seconds
 
@@ -31,14 +32,16 @@ export default async function Home() {
   const data: simpleBlogCard[] = await getData();
   return (
     <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-full max-w-3xl">
+    opts={{
+      align: "start",
+    }}
+    className="w-full max-w-3xl">
+    <FightPosts />
       <CarouselContent>
         {data.map((post, index) => (
           <CarouselItem key={index} className="md:basis-auto ">
             <div className="p-1">
+              
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   {/* <span className="text-3xl font-semibold">{index + 1}</span> */}

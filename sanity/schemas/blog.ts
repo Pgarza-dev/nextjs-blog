@@ -21,6 +21,9 @@ export default {
             name: "titleImage",
             type: "image",
             title: "Title Image",
+            options: {
+                hotspot: true,
+            },
         },
         {
             name: "smallDescription",
@@ -36,8 +39,8 @@ export default {
             ],
         },
         {
-            name: "categories",
-            title: "Blog Categories",
+            name: "category",
+            title: "Blog Category",
             type: "reference",
             to: [
                 {
